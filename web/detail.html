@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详细</title>
+    <!-- 引入全局css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <!-- 引入自己的css -->
+    <link rel="stylesheet" href="css/detail.css">
+    <!-- 引入web图标 -->
+    <link rel="icon" href="image/webLogo.png">
+</head>
+
+<body>
+    <main>
+        <section class="product-section">
+            <div class="product-images">
+                <div class="thumbnail-images">
+                    <img src="image/YSL/lunbo1.jpg" alt="缩略图1">
+                    <img src="image/YSL/lunbo2.jpg" alt="缩略图2">
+                    <img src="image/YSL/lunbo3.jpg" alt="缩略图3">
+                    <img src="image/YSL/lunbo4.jpg" alt="缩略图4">
+                    <img src="image/YSL/lunbo5.jpg" alt="缩略图5">
+                </div>
+                <div class="main-image-container">
+                    <img id="main-image" src="" alt="主图" class="main-image">
+                    <div class="zoom-lens" id="zoom-lens"></div>
+                </div>
+            </div>
+            <div class="product-details">
+                <h1 style="margin-bottom: 20px;">香奈儿炫亮魅力水润系列口红</h1>
+                <div class="color-options">
+                    <label for="color">全部色号</label>
+                    <select id="color">
+                        <option value="b10">B10 透光粉橘</option>
+                        <option value="b11">B11 透光灰粉</option>
+                    </select>
+                </div>
+                <div class="price">¥199.99</div>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="text" value="1">
+                    <button class="increase">+</button>
+                </div>
+                <div class="shipping-info">
+                    <label for="province">配送至：</label>
+                    <select id="province">
+                        <option value="">请选择省</option>
+                        <option value="beijing">北京市</option>
+                        <option value="hebei">河北省</option>
+                        <option value="hubei">湖北省</option>
+                        <!-- 其他省份选项 -->
+                    </select>
+                    <select id="city">
+                        <option value="">请选择市</option>
+                        <!-- 城市选项 -->
+                    </select>
+                    <select id="district">
+                        <option value="">请选择区</option>
+                        <!-- 区域选项 -->
+                    </select>
+                    <br>
+                    <label for="address">详细地址：</label>
+                    <input type="text" id="address" placeholder="请输入详细地址">
+                    <button class="select-address">选择现有地址</button>
+                </div>
+                <button class="cart-count" onclick="addToCart()">加入购物车</button>
+                <!-- 添加 onclick 事件调用 addToCart() -->
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <h2>Mickeys'评论</h2>
+            <div class="review">
+                <p>香奈儿炫亮魅力水润系列口红</p>
+                <div class="review-details">
+                    <p>155****8285</p>
+                    <p>产品质量很不错</p>
+                </div>
+                <div class="split-line"></div>
+            </div>
+            <div class="review">
+                <p>136****8616</p>
+                <p>非常喜欢</p>
+            </div>
+            <div class="review">
+                <p>136****8616</p>
+                <p>非常喜欢</p>
+            </div>
+            <div class="review">
+                <p>136****8616</p>
+                <p>非常喜欢</p>
+            </div>
+            <div class="review">
+                <p>136****8616</p>
+                <p>非常喜欢</p>
+            </div>
+            <div class="review">
+                <p>136****8616</p>
+                <p>非常喜欢</p>
+            </div>
+            <!-- <button class="add-review">添加你的评论</button> -->
+        </section>
+
+        <section class="recommended-products">
+            <h2>你可能还喜欢</h2>
+            <div class="recommended-item">
+                <img src="image/YSL/lunbo1.jpg" alt="推荐产品1">
+                <p>圣罗兰粉管润唇膏</p>
+                <p>¥685</p>
+            </div>
+            <div class="recommended-item">
+                <img src="image/YSL/lunbo2.jpg" alt="推荐产品2">
+                <p>圣罗兰烈焰口红</p>
+                <p>¥580</p>
+            </div>
+            <div class="recommended-item">
+                <img src="image/YSL/lunbo3.jpg" alt="推荐产品3">
+                <p>圣罗兰亮颜唇膏</p>
+                <p>¥410</p>
+            </div>
+            <div class="recommended-item">
+                <img src="image/YSL/lunbo4.jpg" alt="推荐产品4">
+                <p>圣罗兰沁水粉底液</p>
+                <p>¥560</p>
+            </div>
+            <div class="recommended-item">
+                <img src="image/YSL/lunbo5.jpg" alt="推荐产品5">
+                <p>全新「大白饼」蜜粉</p>
+                <p>¥560</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="fixed-purchase-bar">
+        <div class="purchase-bar-details">
+            <p>香奈儿炫亮魅力水润系列口红</p>
+            <select id="color-bar">
+                <option value="b10">B10 豆沙粉色</option>
+                <option value="b11">B11 烈焰大红</option>
+                <!-- 添加其他色号选项 -->
+            </select>
+            <div class="quantity-bar">
+                <button class="decrease-bar">-</button>
+                <input type="text" value="1">
+                <button class="increase-bar">+</button>
+            </div>
+            <p>¥199.9</p>
+        </div>
+        <div class="purchase-bar-buttons">
+            <button class="add-to-cart-bar" onclick="addToCart()">加入购物袋</button>
+            <button class="buy-now-bar">立即购买</button>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+
+</html>

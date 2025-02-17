@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Mickey's 美妆</title>
+    <!-- 引入全局css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <!-- 引入自己的css -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入网页图标 -->
+    <link rel="icon" href="image/webLogo.png">
+</head>
+
+<body>
+    <!-- 导航 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <ul class="navbar-links">
+                <li><a href="#">主页</a></li>
+                <li><a href="#hot">精选</a></li>
+                <li><a href="#hot">新品</a></li>
+                <li><a href="partition.html">分区</a></li>
+                <li><a href="#">评价</a></li>
+                <li><a href="https://weibo.com/">博客</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--头部-->
+    <div class="header">
+        <div class="wrap">
+            <!-- logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/logo.jpg" alt="小杨美妆">
+                </a>
+            </div>
+            <div class="search">
+                <!-- 搜索框 -->
+                <div class="form">
+                    <input type="text" class="from-t" placeholder="搜索您感兴趣的内容">
+                    <button class="button-icon">
+                        <span class="iconfont">&#xe637</span>
+                    </button>
+                    <ul class="search-helper" id="shelper"></ul>
+                    <ul class="hotwords">
+                        <li><a href="blank.html">口红</a></li>
+                        <li><a href="blank.html">腮红</a></li>
+                        <li><a href="blank.html">粉底液</a></li>
+                        <li><a href="blank.html">唇釉</a></li>
+                        <li><a href="blank.html">气垫</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 购物车 -->
+            <div class="cart">
+                <a href="#" onclick="showCart()">
+                    <i class="iconfont">&#xe61d;购物车(<span id="cart-count">0</span>)</i>
+                    <!-- 使用 id 为 cart-count 的元素来显示购物车数量 -->
+                </a>
+                <div class="cart-list">
+                    购物车中空空如也...
+                </div>
+            </div>
+            <div class="login">
+                <button id="login-button">登录</button>
+            </div>
+            <div class="user">
+                <img src="image/YSL/defaultx.webp" alt="">
+                <p style="height: 25px;">
+                    <span id="hellow">您好，</span>
+                    <span id="username">请登录</span>
+                </p>
+            </div>
+            <div class="timeblock">
+                <h2 id="datetime" style="color: #3a0070;"></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- 中上部轮播图 -->
+    <div id="carousel-container">
+        <a href="blank.html"><img src="image/YSL/lunbo1.jpg" alt="Image 1"></a>
+        <a href="blank.html"><img src="image/YSL/lunbo2.jpg" alt="Imgae 2"></a>
+        <a href="blank.html"><img src="image/YSL/lunbo3.jpg" alt="Image 3"></a>
+        <a href="blank.html"><img src="image/YSL/lunbo4.jpg" alt="Image 4"></a>
+        <a href="blank.html"><img src="image/YSL/lunbo5.jpg" alt="Image 5"></a>
+        <a href="blank.html"><img src="image/YSL/lunbo6.jpg" alt="Image 6"></a>
+        <button class="carousel-button prev-button">&lt;</button>
+        <button class="carousel-button next-button">&gt;</button>
+        <div class="dots-container" id="dots-container"></div>
+    </div>
+
+    <div class="hot" id="hot">
+        <h1>当季新品</h1>
+    </div>
+
+    <!-- 中下部商品分区 -->
+    <div class="select">
+        <div class="wrap">
+            <div class="category" id="category-1">
+                <h1>-新品唇妆-</h1>
+                <ul class="product-list"></ul>
+            </div>
+            <div class="category" id="category-2">
+                <h1>-火爆底妆-</h1>
+                <ul class="product-list"></ul>
+            </div>
+            <div class="category" id="category-3">
+                <h1>-当季香水-</h1>
+                <ul class="product-list"></ul>
+            </div>
+            <div class="category" id="category-4">
+                <h1>-护肤精品-</h1>
+                <ul class="product-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="bottom">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>关于我们</h2>
+                <p>欢迎来到Mickey's美妆商城</p>
+                <p> 我们致力于提供最优质的美妆产品和服务</p>
+                <p> 感谢您的支持与信任!</p>
+            </div>
+            <div class="footer-section links">
+                <h2>快速链接</h2>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="partition.html">产品</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>联系我们</h2>
+                <ul>
+                    <li><i class="fa fa-map-marker"></i> 地址: 北京市海淀区</li>
+                    <li><i class="fa fa-phone"></i> 电话: 123 4567 8901</li>
+                    <li><i class="fa fa-envelope"></i> 邮箱: info@mickeys.com</li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Mickey's美妆商城 by YMQ 保留所有权利。2024-5</p>
+    </div>
+
+    <!-- 登录模块 -->
+    <div id="login-modal" class="modal">
+        <div class="login-form">
+            <span id="close-modal" class="close-button">&times;</span>
+            <h2>欢迎登录Mickey's</h2>
+            <div class="split-line"></div>
+            <div id="sms-login" class="login-content active">
+                <input type="text" id="account" placeholder="账号">
+                <input type="password" id="pwd" placeholder="密码">
+                <div class="button-container">
+                    <button id="submit-login-button">登录</button>
+                    <button id="open-register-button">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <button id="login-button">登录</button> -->
+    <!--引入js-->
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
